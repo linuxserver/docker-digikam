@@ -1,0 +1,50 @@
+---
+
+# project information
+project_name: digikam
+project_url: "https://www.digikam.org/"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/digikam-icon.png"
+project_blurb: "[digiKam]({{ project_url }}): Professional Photo Management with the Power of Open Source"
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_blurb_optional_extras_enabled: false
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
+
+# development version
+development_versions: false
+
+# container parameters
+common_param_env_vars_enabled: true
+param_container_name: "{{ project_name }}"
+param_usage_include_env: true
+param_usage_include_ports: false
+param_usage_include_net: true
+param_net: "host"
+param_net_desc: "Use Host Networking"
+param_env_vars:
+  - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York." }
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Users home directory in the container, stores database." }
+# optional parameters
+opt_param_usage_include_ports: true
+opt_param_ports:
+  - { external_port: "3000", internal_port: "3000", port_desc: "digiKam desktop gui" }
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  The application can be accessed at:
+
+  http://yourhost:3000/
+  By default the user/pass is abc/abc, if you change your password or want to login manually to the GUI session for any reason use the following link:
+
+  http://yourhost:3000/?login=true
+
+# changelog
+changelogs:
+  - { date: "20.05.20:", desc: "Initial release." }
