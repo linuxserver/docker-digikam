@@ -10,8 +10,8 @@ LABEL maintainer="hackerman"
 RUN \
  echo "**** install digikam ****" && \
  if [ -z ${DIGIKAM_VERSION} ]; then \
-	DIGIKAM_VERSION=$(curl -s https://invent.kde.org/graphics/digikam/-/tags\?format\=atom \
-	| grep -m 1 -P "<title>(v\d\.\d\.\d)</title>" | sed 's/\(^\s*<title>v\|<\/title>\s*$\)//g'); \
+	DIGIKAM_VERSION=$(curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" \
+	| grep -m 1 -P '<title>(v\d\.\d\.\d)</title>' | sed 's/\(^\s*<title>v\|<\/title>\s*$\)//g'); \
  fi && \
  curl -o /usr/bin/digikam -L \
  	https://download.kde.org/stable/digikam/${DIGIKAM_VERSION}/digikam-${DIGIKAM_VERSION}-x86-64.appimage && \
