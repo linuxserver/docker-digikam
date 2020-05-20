@@ -103,7 +103,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" | grep -m 1 -P '<title>(v\d\.\d\.\d)</title>' | sed 's/\(^\s*<title>v\|<\/title>\s*$\)//g' ''',
+            script: ''' curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" | grep -m 1 -P '<title>(v\\d\\.\\d\\.\\d)</title>' | sed 's/\\(^\\s*<title>v\\|<\\/title>\\s*$\\)//g' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
