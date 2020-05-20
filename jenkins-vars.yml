@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-digikam
 external_type: na
-custom_version_command: curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" | grep -m 1 -P '<title>(v\d\.\d\.\d)</title>' | sed 's/\(^\s*<title>v\|<\/title>\s*$\)//g'
+custom_version_command: curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" | grep -m 1 -P '<title>(v\\d\\.\\d\\.\\d)</title>' | sed 's/\\(^\\s*<title>v\\|<\\/title>\\s*$\\)//g'
 release_type: stable
 release_tag: latest
 ls_branch: master
