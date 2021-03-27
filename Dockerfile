@@ -8,6 +8,9 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="hackerman"
 
 RUN \
+ echo "**** install dependencies ****" && \
+ apt-get install -y --no-install-recommends \
+	libnss3 && \
  echo "**** install digikam ****" && \
  if [ -z ${DIGIKAM_VERSION} ]; then \
 	DIGIKAM_VERSION=$(curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" \
@@ -17,8 +20,8 @@ RUN \
  	https://download.kde.org/stable/digikam/${DIGIKAM_VERSION}/digiKam-${DIGIKAM_VERSION}-x86-64.appimage && \
  chmod +x /app/digikam && \
  echo "**** cleanup ****" && \
- apt-get clean && \
  rm -rf \
+ apt-get clean && \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
