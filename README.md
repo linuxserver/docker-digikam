@@ -40,7 +40,7 @@ Find us at:
 
 [digiKam](https://www.digikam.org/): Professional Photo Management with the Power of Open Source
 
-[![digikam](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/digikam-icon.png)](https://www.digikam.org/)
+[![digikam](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/digikam.png)](https://www.digikam.org/)
 
 ## Supported Architectures
 
