@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-rdesktop-web:bionic
+FROM ghcr.io/linuxserver/baseimage-rdesktop-web:focal
 
 # set version label
 ARG BUILD_DATE

@@ -45,5 +45,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
-  - { date: "20.05.20:", desc: "Initial release." }
+  - { date: "27.12.21:", desc: "Rebase to focal to resolve dependency issues." }
   - { date: "27.03.21:", desc: "Download link fixed." }
+  - { date: "20.05.20:", desc: "Initial release." }
+
