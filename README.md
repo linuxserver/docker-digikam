@@ -227,5 +227,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **20.05.20:** - Initial release.
+* **27.12.21:** - Rebase to focal to resolve dependency issues.
 * **27.03.21:** - Download link fixed.
+* **20.05.20:** - Initial release.
