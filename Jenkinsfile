@@ -24,8 +24,8 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/digikam'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/digikam'
     PR_DOCKERHUB_IMAGE = 'lspipepr/digikam'
-    DIST_IMAGE = 'ubuntu'
-    MULTIARCH = 'false'
+    DIST_IMAGE = 'arch'
+    MULTIARCH = 'true'
     CI = 'true'
     CI_WEB = 'true'
     CI_PORT = '3000'
@@ -104,7 +104,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" | grep -m 1 -P '<title>(v\\d\\.\\d\\.\\d)</title>' | sed 's/\\(^\\s*<title>v\\|<\\/title>\\s*$\\)//g' ''',
+            script: ''' curl -sL https://archlinux.org/packages/extra/x86_64/digikam/json/ | jq -r '.pkgver' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
