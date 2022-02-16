@@ -11,6 +11,8 @@ project_blurb_optional_extras_enabled: false
 # supported architectures
 available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
 
 # development version
 development_versions: false
@@ -45,6 +47,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "15.02.22:", desc: "Rebase to Arch." }
   - { date: "27.12.21:", desc: "Rebase to focal to resolve dependency issues." }
   - { date: "27.03.21:", desc: "Download link fixed." }
   - { date: "20.05.20:", desc: "Initial release." }

@@ -18,7 +18,7 @@ jobs:
           fi
           echo "**** External trigger running off of master branch. To disable this trigger, set a Github secret named \"PAUSE_EXTERNAL_TRIGGER_DIGIKAM_MASTER\". ****"
           echo "**** Retrieving external version ****"
-          EXT_RELEASE=$(curl -s "https://invent.kde.org/graphics/digikam/-/tags?format=atom" | grep -m 1 -P '<title>(v\d\.\d\.\d)</title>' | sed 's/\(^\s*<title>v\|<\/title>\s*$\)//g')
+          EXT_RELEASE=$(curl -sL https://archlinux.org/packages/extra/x86_64/digikam/json/ | jq -r '.pkgver')
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "**** Can't retrieve external version, exiting ****"
             FAILURE_REASON="Can't retrieve external version for digikam branch master"
@@ -36,10 +36,15 @@ jobs:
           token=$(curl -sX GET \
             "https://ghcr.io/token?scope=repository%3Alinuxserver%2Fdigikam%3Apull" \
             | jq -r '.token')
-            digest=$(curl -s \
+            multidigest=$(curl -s \
               --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
               --header "Authorization: Bearer ${token}" \
               "https://ghcr.io/v2/${image}/manifests/${tag}" \
+              | jq -r 'first(.manifests[].digest)')
+            digest=$(curl -s \
+              --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
+              --header "Authorization: Bearer ${token}" \
+              "https://ghcr.io/v2/${image}/manifests/${multidigest}" \
               | jq -r '.config.digest')
           image_info=$(curl -sL \
             --header "Authorization: Bearer ${token}" \
