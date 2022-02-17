@@ -395,7 +395,7 @@ pulseaudio 15.0-1
 python 3.10.2-1
 qgpgme 1.17.0-2
 qrencode 4.1.1-1
-qt5-base 5.15.2+kde+r298-1
+qt5-base 5.15.2+kde+r300-1
 qt5-declarative 5.15.2+kde+r46-1
 qt5-location 5.15.2-5
 qt5-multimedia 5.15.2-2
