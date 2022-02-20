@@ -13,7 +13,8 @@ ENV TITLE=DigiKam
 RUN \
   echo "**** install runtime packages ****" && \
   pacman -Sy --noconfirm --needed \
-    digikam && \
+    digikam \
+    mariadb && \
   dbus-uuidgen > /etc/machine-id && \
   echo "**** cleanup ****" && \
   rm -rf \
