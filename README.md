@@ -62,10 +62,35 @@ The architectures supported by this image are:
 
 The application can be accessed at:
 
-http://yourhost:3000/
+* http://yourhost:3000/
+
 By default the user/pass is abc/abc, if you change your password or want to login manually to the GUI session for any reason use the following link:
 
-http://yourhost:3000/?login=true
+* http://yourhost:3000/?login=true
+
+You can also force login on the '/' path without this parameter by passing the environment variable `-e AUTO_LOGIN=false`.
+
+#### Mysql Internal
+
+When using mysql internal mode for the database you will need to click on "Find" Button for all the required binaries (mysql_install_db,mysqladmin,mysqld). Then select the binary file and press Open.
+
+#### Keyboard Layouts
+
+This should match the layout on the computer you are accessing the container from.
+The keyboard layouts available for use are:
+* da-dk-qwerty- Danish keyboard
+* de-ch-qwertz- Swiss German keyboard (qwertz)
+* de-de-qwertz- German keyboard (qwertz) - **OSK available**
+* en-gb-qwerty- English (UK) keyboard
+* en-us-qwerty- English (US) keyboard - **OSK available** **DEFAULT**
+* es-es-qwerty- Spanish keyboard - **OSK available**
+* fr-ch-qwertz- Swiss French keyboard (qwertz)
+* fr-fr-azerty- French keyboard (azerty) - **OSK available**
+* it-it-qwerty- Italian keyboard - **OSK available**
+* ja-jp-qwerty- Japanese keyboard
+* pt-br-qwerty- Portuguese Brazilian keyboard
+* sv-se-qwerty- Swedish keyboard
+* tr-tr-qwerty- Turkish-Q keyboard
 
 ## Usage
 
@@ -85,6 +110,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
+      - SUBFOLDER=/ #optional
+      - KEYBOARD=en-us-qwerty #optional
     volumes:
       - /path/to/config:/config
     ports:
@@ -101,6 +128,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=America/New_York \
+  -e SUBFOLDER=/ `#optional` \
+  -e KEYBOARD=en-us-qwerty `#optional` \
   -p 3000:3000 `#optional` \
   -v /path/to/config:/config \
   --restart unless-stopped \
@@ -118,6 +147,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York. |
+| `-e SUBFOLDER=/` | Specify a subfolder to use with reverse proxies, IE `/subfolder/` |
+| `-e KEYBOARD=en-us-qwerty` | See the keyboard layouts section for more information and options. |
 | `-v /config` | Users home directory in the container, stores database. |
 
 ## Environment variables from files (Docker secrets)
@@ -229,6 +260,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **20.02.22:** - Add MariaDB, expand documentation.
 * **15.02.22:** - Rebase to Arch.
 * **27.12.21:** - Rebase to focal to resolve dependency issues.
 * **27.03.21:** - Download link fixed.
