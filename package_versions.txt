@@ -114,7 +114,7 @@ hwdata 0.356-1
 hwloc 2.7.0-1
 iana-etc 20220205-1
 icu 70.1-1
-imagemagick 7.1.0.25-1
+imagemagick 7.1.0.26-1
 imath 3.1.4-1
 imlib2 1.8.0-1
 iniparser 4.1-4
@@ -400,7 +400,7 @@ pulseaudio 15.0-1
 python 3.10.2-1
 qgpgme 1.17.0-2
 qrencode 4.1.1-1
-qt5-base 5.15.2+kde+r301-1
+qt5-base 5.15.2+kde+r302-1
 qt5-declarative 5.15.2+kde+r46-1
 qt5-location 5.15.2-5
 qt5-multimedia 5.15.2-2
@@ -408,7 +408,7 @@ qt5-quickcontrols 5.15.2-2
 qt5-speech 5.15.2+kde+r3-1
 qt5-svg 5.15.2+kde+r16-2
 qt5-translations 5.15.2+kde+r22-1
-qt5-wayland 5.15.2+kde+r52-1
+qt5-wayland 5.15.2+kde+r54-1
 qt5-webchannel 5.15.2+kde+r5-2
 qt5-webengine 5.15.8-9
 qt5-x11extras 5.15.2-2
@@ -457,7 +457,7 @@ tslib 1.22-1
 tzdata 2021e-1
 uchardet 0.0.7-1
 udisks2 2.9.4-1
-upower 0.99.15-1
+upower 0.99.16-1
 usbmuxd 1.1.1-1
 util-linux 2.37.4-1
 util-linux-libs 2.37.4-1
