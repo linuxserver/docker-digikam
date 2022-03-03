@@ -389,9 +389,9 @@ pixman 0.40.0-1
 pkgconf 1.8.0-1
 polkit 0.120-4
 polkit-qt5 0.114.0-1
-poppler 22.02.0-2
-poppler-glib 22.02.0-2
-poppler-qt5 22.02.0-2
+poppler 22.03.0-1
+poppler-glib 22.03.0-1
+poppler-qt5 22.03.0-1
 popt 1.18-3
 prison 5.91.0-1
 procps-ng 3.3.17-1
@@ -400,7 +400,7 @@ pulseaudio 15.0-2
 python 3.10.2-1
 qgpgme 1.17.0-2
 qrencode 4.1.1-1
-qt5-base 5.15.2+kde+r304-1
+qt5-base 5.15.2+kde+r305-1
 qt5-declarative 5.15.2+kde+r46-1
 qt5-location 5.15.2-5
 qt5-multimedia 5.15.2-2
