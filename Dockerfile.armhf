@@ -14,7 +14,13 @@ RUN \
   echo "**** install runtime packages ****" && \
   pacman -Sy --noconfirm --needed \
     digikam \
-    mariadb && \
+    firefox \
+    mariadb \
+    perl-image-exiftool && \
+  echo "**** image tweaks ****" && \
+  ln -s \
+    /usr/bin/vendor_perl/exiftool \
+    /usr/bin/exiftool && \
   dbus-uuidgen > /etc/machine-id && \
   echo "**** cleanup ****" && \
   rm -rf \
