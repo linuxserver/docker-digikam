@@ -430,7 +430,7 @@ shared-mime-info 2.0+115+gd74a913-1
 signon-kwallet-extension 21.12.3-1
 signon-plugin-oauth2 0.25-1
 signon-ui 0.17+20171022-3
-signond 8.60-3
+signond 8.61-1
 snappy 1.1.9-2
 solid 5.91.0-1
 sonnet 5.91.0-1
@@ -460,7 +460,7 @@ tslib 1.22-1
 tzdata 2021e-1
 uchardet 0.0.7-1
 udisks2 2.9.4-1
-upower 0.99.16-2
+upower 0.99.17-1
 usbmuxd 1.1.1-1
 util-linux 2.37.4-1
 util-linux-libs 2.37.4-1
