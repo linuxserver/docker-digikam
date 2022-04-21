@@ -21,7 +21,7 @@ avahi 0.8+22+gfd482a7-3
 bash 5.1.016-1
 binutils 2.38-3
 bison 3.8.2-3
-blas 3.10.0-1
+blas 3.10.1-1
 bridge-utils 1.7.1-1
 brotli 1.0.9-7
 btrfs-progs 5.16.2-1
@@ -33,7 +33,7 @@ ca-certificates-utils 20210603-1
 cairo 1.17.6-1
 cairomm 1.14.3-2
 cantarell-fonts 1:0.303.1-1
-cblas 3.10.0-1
+cblas 3.10.1-1
 cdparanoia 10.2-8
 containerd 1.6.2-1
 convertlit 1.8-10
@@ -91,7 +91,7 @@ gmp 6.2.1-1
 gnupg 2.2.32-2
 gnutls 3.7.4-1
 gpgme 1.17.1-1
-gptfdisk 1.0.8-1
+gptfdisk 1.0.9-1
 grantlee 5.2.0-3
 grantleetheme 21.12.3-1
 graphene 1.10.8-1
@@ -115,7 +115,7 @@ hwdata 0.357-1
 hwloc 2.7.1-1
 iana-etc 20220205-1
 icu 70.1-1
-imagemagick 7.1.0.29-1
+imagemagick 7.1.0.30-1
 imath 3.1.5-1
 imlib2 1.8.1-1
 iniparser 4.1-4
@@ -171,14 +171,14 @@ kwindowsystem 5.93.0-1
 kxmlgui 5.93.0-1
 l-smash 2.14.5-2
 lame 3.100-3
-lapack 3.10.0-1
+lapack 3.10.1-1
 lcms2 2.13.1-1
 ldns 1.8.1-1
 lensfun 1:0.3.3-1
 less 1:590-1
 libaccounts-glib 1.25-7
 libaccounts-qt 1.16-3
-libaio 0.3.112-3
+libaio 0.3.113-1
 libakonadi 21.12.3-2
 libarchive 3.6.0-1
 libass 0.15.2-2
@@ -220,7 +220,7 @@ libgssglue 0.4-4
 libgudev 237-1
 libheif 1.12.0-3
 libibus 1.5.26-2
-libical 3.0.14-2
+libical 3.0.14-3
 libice 1.0.10-3
 libid3tag 0.15.1b-11
 libidn2 2.3.2-1
@@ -362,7 +362,7 @@ openal 1.21.1-3
 openbox 3.6.1-8
 opencore-amr 0.1.5-5
 opencv 4.5.5-4
-openexr 3.1.4-1
+openexr 3.1.5-1
 openjpeg2 2.4.0-1
 openssh 8.9p1-1
 openssl 1.1.1.n-1
@@ -375,7 +375,7 @@ pam 1.5.2-1
 pambase 20211210-1
 pango 1:1.50.6-1
 pangomm 2.46.2-1
-parted 3.4-2
+parted 3.5-1
 patch 2.7.6-8
 pavucontrol 1:5.0-1
 pciutils 3.7.0-2
@@ -402,7 +402,7 @@ pulseaudio 15.0-4
 python 3.10.4-1
 qgpgme 1.17.1-1
 qrencode 4.1.1-1
-qt5-base 5.15.3+kde+r137-1
+qt5-base 5.15.3+kde+r137-2
 qt5-declarative 5.15.3+kde+r20-1
 qt5-location 5.15.3+kde+r2-1
 qt5-multimedia 5.15.3+kde+r0-1
@@ -410,9 +410,9 @@ qt5-quickcontrols 5.15.3+kde+r0-1
 qt5-speech 5.15.3+kde+r1-1
 qt5-svg 5.15.3+kde+r12-1
 qt5-translations 5.15.3+kde+r2-1
-qt5-wayland 5.15.3+kde+r41-1
+qt5-wayland 5.15.3+kde+r44-1
 qt5-webchannel 5.15.3+kde+r3-1
-qt5-webengine 5.15.9-1
+qt5-webengine 5.15.9-2
 qt5-x11extras 5.15.3+kde+r0-1
 qt5-xmlpatterns 5.15.3+kde+r0-1
 qtav 1.13.0-4
@@ -487,7 +487,7 @@ xf86-input-libinput 1.2.1-1
 xf86-video-amdgpu 22.0.0-1
 xf86-video-ati 1:19.1.0.r9.g5eba006e-2
 xf86-video-intel 1:2.99.917+916+g31486f40-2
-xfsprogs 5.15.0-1
+xfsprogs 5.15.0-2
 xkeyboard-config 2.35.1-1
 xorg-fonts-encodings 1.0.5-2
 xorg-server 21.1.3-6
