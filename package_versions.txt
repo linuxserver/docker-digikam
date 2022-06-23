@@ -49,7 +49,7 @@ dconf 0.40.0-1
 desktop-file-utils 0.26-2
 device-mapper 2.03.16-1
 diffutils 3.8-1
-digikam 7.6.0-5
+digikam 7.7.0-1
 dmraid 1.0.0.rc16.3-13
 dnssec-anchors 20190629-3
 docker 1:20.10.17-1
