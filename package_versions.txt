@@ -67,7 +67,7 @@ fftw 3.3.10-3
 file 5.43-1
 filesystem 2021.12.07-1
 findutils 4.9.0-1
-firefox 105.0.1-1
+firefox 105.0.2-1
 flac 1.4.0-1
 flex 2.6.4-3
 fontconfig 2:2.14.0-1
@@ -403,7 +403,7 @@ poppler-qt5 22.09.0-1
 popt 1.18-3
 prison 5.98.0-1
 procps-ng 3.3.17-1
-protobuf 21.6-1
+protobuf 21.7-1
 pulseaudio 16.1-1
 python 3.10.7-1
 qca-qt5 2.3.4-3
