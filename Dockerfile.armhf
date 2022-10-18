@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-rdesktop-web:arm32v7-arcarch-a95e952b-ls63h
+FROM ghcr.io/linuxserver/baseimage-rdesktop-web:arm32v7-arch-a95e952b-ls63h
 
 # set version label
 ARG BUILD_DATE
