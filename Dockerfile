@@ -16,9 +16,12 @@ RUN \
     breeze-icons \
     digikam \
     firefox \
-    icu \
+    freerdp \
     mariadb \
-    perl-image-exiftool && \
+    perl-image-exiftool \
+    libxml2 && \
+  echo "**** package installs post-upgrade ****" && \
+  pacman -Sy --noconfirm --needed \
   echo "**** image tweaks ****" && \
   ln -s \
     /usr/bin/vendor_perl/exiftool \

@@ -16,9 +16,10 @@ RUN \
     breeze-icons \
     digikam \
     firefox \
-    icu \
+    freerdp \
     mariadb \
-    perl-image-exiftool && \
+    perl-image-exiftool \
+    libxml2 && \
   echo "**** image tweaks ****" && \
   ln -s \
     /usr/bin/vendor_perl/exiftool \
