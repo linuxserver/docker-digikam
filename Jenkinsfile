@@ -104,7 +104,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -sL https://archlinux.org/packages/extra/x86_64/digikam/json/ | jq -r '.pkgver' ''',
+            script: ''' curl -sX GET https://api.github.com/repos/linuxserver/docker-baseimage-rdesktop-web/releases | jq -r 'first(.[] | select(.tag_name | startswith("arch-"))) | .tag_name' | sed 's|arch-||' | sed 's|-ls.*||' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
