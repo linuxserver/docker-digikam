@@ -77,6 +77,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "20.01.23:", desc: "Added breeze-icons package for icon support." }
   - { date: "21.11.22:", desc: "Trigger upon baseimage updates (arch being a rolling distro has too many dependency breaks otherwise). Release version will be the baseimage build date going forward." }
   - { date: "20.10.22:", desc: "Migrate to s6v3." }
   - { date: "07.03.22:", desc: "Add Exiftool and firefox for image exports." }
