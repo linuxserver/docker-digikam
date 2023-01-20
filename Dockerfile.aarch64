@@ -13,6 +13,7 @@ ENV TITLE=DigiKam
 RUN \
   echo "**** install runtime packages ****" && \
   pacman -Sy --noconfirm --needed \
+    breeze-icons \
     digikam \
     firefox \
     mariadb \
