@@ -2,8 +2,7 @@
 
 # jenkins variables
 project_name: docker-digikam
-external_type: na
-custom_version_command: "curl -sX GET https://api.github.com/repos/linuxserver/docker-baseimage-rdesktop-web/releases | jq -r 'first(.[] | select(.tag_name | startswith(\"arch-\"))) | .tag_name' | sed 's|arch-||' | sed 's|-ls.*||'"
+external_type: os
 release_type: stable
 release_tag: latest
 ls_branch: master
