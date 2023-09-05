@@ -23,7 +23,7 @@ archlinux-keyring                                                             20
 argon2                                                                        20190702-5                                         alpm          
 array-flatten                                                                 1.1.1                                              npm           
 async                                                                         3.2.4                                              npm           
-at-spi2-core                                                                  2.48.3-2                                           alpm          
+at-spi2-core                                                                  2.48.4-1                                           alpm          
 attica                                                                        5.109.0-1                                          alpm          
 attr                                                                          2.5.1-3                                            alpm          
 audit                                                                         3.1.2-1                                            alpm          
@@ -412,7 +412,7 @@ iana-etc                                                                      20
 iconv-lite                                                                    0.4.24                                             npm           
 icu                                                                           73.2-2                                             alpm          
 ijs                                                                           0.35-5                                             alpm          
-imagemagick                                                                   7.1.1.15-3                                         alpm          
+imagemagick                                                                   7.1.1.15-4                                         alpm          
 imath                                                                         3.1.9-1                                            alpm          
 imlib2                                                                        1.12.0-1                                           alpm          
 inetutils                                                                     2.4-1                                              alpm          
@@ -524,6 +524,7 @@ libdatrie                                                                     0.
 libdbusmenu-qt5                                                               0.9.3+16.04.20160218-6                             alpm          
 libdc1394                                                                     2.2.7-1                                            alpm          
 libde265                                                                      1.0.12-1                                           alpm          
+libdeflate                                                                    1.18-1                                             alpm          
 libdmtx                                                                       0.7.7-1                                            alpm          
 libdrm                                                                        2.4.116-1                                          alpm          
 libedit                                                                       20221030_3.1-1                                     alpm          
@@ -537,7 +538,7 @@ libfontenc                                                                    1.
 libgcrypt                                                                     1.10.2-1                                           alpm          
 libglvnd                                                                      1.6.0-1                                            alpm          
 libgpg-error                                                                  1.47-1                                             alpm          
-libgphoto2                                                                    2.5.30-2                                           alpm          
+libgphoto2                                                                    2.5.31-1                                           alpm          
 libgudev                                                                      238-1                                              alpm          
 libheif                                                                       1.16.2-1                                           alpm          
 libical                                                                       3.0.16-5                                           alpm          
@@ -684,7 +685,7 @@ mtdev                                                                         1.
 nan                                                                           2.17.0                                             npm           
 ncurses                                                                       6.4_20230520-1                                     alpm          
 negotiator                                                                    0.6.3                                              npm           
-net-snmp                                                                      5.9.1-7                                            alpm          
+net-snmp                                                                      5.9.1-8                                            alpm          
 netsnmp-python                                                                1.0a1                                              python        
 nettle                                                                        3.9.1-1                                            alpm          
 nginx                                                                         1.24.0-1                                           alpm          
@@ -704,7 +705,7 @@ openbox                                                                       3.
 opencore-amr                                                                  0.1.6-1                                            alpm          
 opencv                                                                        4.8.0-5                                            alpm          
 opencv                                                                        480                                                java-archive  
-openexr                                                                       3.1.11-1                                           alpm          
+openexr                                                                       3.2.0-2                                            alpm          
 openjpeg2                                                                     2.5.0-2                                            alpm          
 openmpi                                                                       4.1.5-3                                            alpm          
 openpmix                                                                      4.2.5-1                                            alpm          
@@ -798,7 +799,7 @@ qca-qt5                                                                       2.
 qpdf                                                                          11.5.0-1                                           alpm          
 qrencode                                                                      4.1.1-2                                            alpm          
 qs                                                                            6.11.0                                             npm           
-qt5-base                                                                      5.15.10+kde+r152-1                                 alpm          
+qt5-base                                                                      5.15.10+kde+r155-1                                 alpm          
 qt5-declarative                                                               5.15.10+kde+r31-1                                  alpm          
 qt5-location                                                                  5.15.10+kde+r4-2                                   alpm          
 qt5-multimedia                                                                5.15.10+kde+r3-1                                   alpm          
@@ -819,7 +820,7 @@ rtkit                                                                         0.
 runc                                                                          1.1.9-1                                            alpm          
 safe-buffer                                                                   5.2.1                                              npm           
 safer-buffer                                                                  2.1.2                                              npm           
-sane                                                                          1.2.1-4                                            alpm          
+sane                                                                          1.2.1-5                                            alpm          
 sdl2                                                                          2.28.2-1                                           alpm          
 sed                                                                           4.9-3                                              alpm          
 send                                                                          0.18.0                                             npm           
