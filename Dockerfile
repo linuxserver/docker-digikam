@@ -17,6 +17,7 @@ RUN \
     digikam \
     firefox \
     mariadb \
+    openexr \
     perl-image-exiftool && \
   echo "**** image tweaks ****" && \
   ln -s \
