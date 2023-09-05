@@ -265,6 +265,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.09.23:** - Add openexr dependency.
 * **18.03.23:** - Rebase to KasmVNC base image.
 * **20.01.23:** - Added breeze-icons package for icon support.
 * **21.11.22:** - Trigger upon baseimage updates (arch being a rolling distro has too many dependency breaks otherwise). Release version will be the baseimage build date going forward.

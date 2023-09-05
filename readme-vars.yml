@@ -80,6 +80,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "05.09.23:", desc: "Add openexr dependency." }
   - { date: "18.03.23:", desc: "Rebase to KasmVNC base image." }
   - { date: "20.01.23:", desc: "Added breeze-icons package for icon support." }
   - { date: "21.11.22:", desc: "Trigger upon baseimage updates (arch being a rolling distro has too many dependency breaks otherwise). Release version will be the baseimage build date going forward." }
