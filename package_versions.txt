@@ -229,7 +229,7 @@ github.com/distribution/reference                                             v0
 github.com/docker/buildx                                                      v0.13.1                                   go-module                      
 github.com/docker/cli                                                         v26.0.0+incompatible                      go-module                      
 github.com/docker/cli/cmd/docker                                              26.0.1                                    go-module                      
-github.com/docker/compose/v2                                                  (devel)                                   go-module                      
+github.com/docker/compose/v2                                                  2.26.1                                    go-module                      
 github.com/docker/distribution                                                v2.8.3+incompatible                       go-module     (+1 duplicate)   
 github.com/docker/docker                                                      26.0.1                                    go-module                      
 github.com/docker/docker                                                      v0.0.0-20240410125953-60b9add796ae        go-module                      
@@ -625,7 +625,7 @@ lapack                                                                        3.
 lcms2                                                                         2.16-1                                    alpm                           
 lensfun                                                                       0.3.4                                     python                         
 lensfun                                                                       1:0.3.4-3                                 alpm                           
-less                                                                          1:643-1                                   alpm                           
+less                                                                          1:643-2                                   alpm                           
 libaccounts-glib                                                              1.27-1                                    alpm                           
 libaccounts-qt                                                                1.17-1                                    alpm                           
 libakonadi                                                                    24.02.2-1                                 alpm                           
