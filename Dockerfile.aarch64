@@ -20,6 +20,7 @@ RUN \
     breeze-icons \
     digikam \
     firefox \
+    hugin \
     mariadb \
     openexr \
     perl-image-exiftool && \
