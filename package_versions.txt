@@ -556,7 +556,7 @@ jpegxl                                                                          
 jq                                                                            1.7.1-2                                 alpm                           
 js                                                                            1.0.0                                   npm                            
 json-c                                                                        0.17-2                                  alpm                           
-json-glib                                                                     1.8.0-2                                 alpm                           
+json-glib                                                                     1.10.0-1                                alpm                           
 k8s.io/api                                                                    v0.26.2                                 go-module                      
 k8s.io/api                                                                    v0.29.2                                 go-module                      
 k8s.io/apimachinery                                                           v0.26.2                                 go-module     (+1 duplicate)   
