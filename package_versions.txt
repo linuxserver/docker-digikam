@@ -49,7 +49,7 @@ bytes                                                                         3.
 bzip2                                                                         1.0.8-6                                 alpm                           
 c-ares                                                                        1.33.1-1                                alpm                           
 ca-certificates                                                               20240618-1                              alpm                           
-ca-certificates-mozilla                                                       3.104-1                                 alpm                           
+ca-certificates-mozilla                                                       3.105-1                                 alpm                           
 ca-certificates-utils                                                         20240618-1                              alpm                           
 cairo                                                                         1.18.2-2                                alpm                           
 call-bind                                                                     1.0.7                                   npm                            
@@ -130,7 +130,7 @@ filelist                                                                      1.
 filesystem                                                                    2024.04.07-1                            alpm                           
 finalhandler                                                                  1.3.1                                   npm                            
 findutils                                                                     4.10.0-2                                alpm                           
-firefox                                                                       130.0.1-2                               alpm                           
+firefox                                                                       131.0-1                                 alpm                           
 flac                                                                          1.4.3-2                                 alpm                           
 flex                                                                          2.6.4-5                                 alpm                           
 fontconfig                                                                    2:2.15.0-2                              alpm                           
@@ -505,7 +505,7 @@ gopkg.in/yaml.v3                                                              v3
 gperftools                                                                    2.15-1                                  alpm                           
 gpgme                                                                         1.23.2-6                                alpm                           
 grantleetheme                                                                 24.08.1-1                               alpm                           
-graphene                                                                      1.10.8-1                                alpm                           
+graphene                                                                      1.10.8-2                                alpm                           
 graphite                                                                      1:1.3.14-4                              alpm                           
 grep                                                                          3.11-1                                  alpm                           
 groff                                                                         1.23.0-7                                alpm                           
@@ -516,7 +516,7 @@ gst-plugins-base                                                              1.
 gst-plugins-base-libs                                                         1.24.8-1                                alpm                           
 gstreamer                                                                     1.24.8-1                                alpm                           
 gtest                                                                         1.15.2-1                                alpm                           
-gtk-update-icon-cache                                                         1:4.16.2-1                              alpm                           
+gtk-update-icon-cache                                                         1:4.16.2-2                              alpm                           
 gtk3                                                                          1:3.24.43-3                             alpm                           
 guile                                                                         3.0.10-1                                alpm                           
 gzip                                                                          1.13-4                                  alpm                           
@@ -841,10 +841,10 @@ nettle                                                                        3.
 nginx                                                                         1.26.2-1                                alpm                           
 nodejs-lts-hydrogen                                                           18.20.4-1                               alpm                           
 noto-fonts                                                                    1:24.9.1-1                              alpm                           
-noto-fonts-emoji                                                              1:2.042-1                               alpm                           
+noto-fonts-emoji                                                              1:2.047-1                               alpm                           
 npth                                                                          1.7-1                                   alpm                           
 nspr                                                                          4.35-3                                  alpm                           
-nss                                                                           3.104-1                                 alpm                           
+nss                                                                           3.105-1                                 alpm                           
 object-assign                                                                 4.1.1                                   npm                            
 object-inspect                                                                1.13.2                                  npm                            
 ocl-icd                                                                       2.3.2-2                                 alpm                           
@@ -946,7 +946,7 @@ qpdf                                                                          11
 qrencode                                                                      4.1.1-3                                 alpm                           
 qs                                                                            6.13.0                                  npm                            
 qt6-5compat                                                                   6.7.3-1                                 alpm                           
-qt6-base                                                                      6.7.3-1                                 alpm                           
+qt6-base                                                                      6.7.3-2                                 alpm                           
 qt6-declarative                                                               6.7.3-2                                 alpm                           
 qt6-multimedia                                                                6.7.3-1                                 alpm                           
 qt6-multimedia-ffmpeg                                                         6.7.3-1                                 alpm                           
@@ -973,7 +973,7 @@ runc                                                                          1.
 safe-buffer                                                                   5.2.1                                   npm                            
 safer-buffer                                                                  2.1.2                                   npm                            
 sane                                                                          1.3.1-1                                 alpm                           
-sdl2                                                                          2.30.7-1                                alpm                           
+sdl2                                                                          2.30.8-1                                alpm                           
 sed                                                                           4.9-3                                   alpm                           
 send                                                                          0.19.0                                  npm                            
 serve-static                                                                  1.16.2                                  npm                            
@@ -1042,7 +1042,7 @@ util-linux                                                                    2.
 util-linux-libs                                                               2.40.2-1                                alpm                           
 utils-merge                                                                   1.0.1                                   npm                            
 v4l-utils                                                                     1.28.1-1                                alpm                           
-vapoursynth                                                                   R69-1                                   alpm                           
+vapoursynth                                                                   R70-1                                   alpm                           
 vary                                                                          1.1.2                                   npm                            
 verdict                                                                       1.4.2-1                                 alpm                           
 vid.stab                                                                      1.1.1-2                                 alpm                           
