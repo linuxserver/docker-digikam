@@ -26,7 +26,7 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/digikam'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/digikam'
     PR_DOCKERHUB_IMAGE = 'lspipepr/digikam'
-    DIST_IMAGE = 'arch'
+    DIST_IMAGE = 'ubuntu'
     MULTIARCH = 'true'
     CI = 'true'
     CI_WEB = 'true'
@@ -131,7 +131,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -sX GET https://api.github.com/repos/linuxserver/docker-baseimage-kasmvnc/releases | jq -r 'first(.[] | select(.tag_name | startswith("arch-"))) | .tag_name' | sed 's|arch-||' | sed 's|-ls.*||' ''',
+            script: ''' curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(="|/")' '/href="[0-9]/ {print $2}' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }

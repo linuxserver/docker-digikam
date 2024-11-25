@@ -411,6 +411,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **25.11.24:** - Rebase to Debian for x86_64 using official appimage.
 * **10.02.24:** - Update Readme with new env vars and ingest proper PWA icon.
 * **05.09.23:** - Add openexr dependency.
 * **18.03.23:** - Rebase to KasmVNC base image.
