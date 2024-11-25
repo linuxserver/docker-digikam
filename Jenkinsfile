@@ -27,7 +27,7 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/digikam'
     PR_DOCKERHUB_IMAGE = 'lspipepr/digikam'
     DIST_IMAGE = 'ubuntu'
-    MULTIARCH = 'true'
+    MULTIARCH = 'false'
     CI = 'true'
     CI_WEB = 'true'
     CI_PORT = '3000'

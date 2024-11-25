@@ -54,7 +54,7 @@ The architectures supported by this image are:
 | Architecture | Available | Tag |
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
-| arm64 | ✅ | arm64v8-\<version tag\> |
+| arm64 | ❌ | |
 | armhf | ❌ | |
 
 ## Application Setup
@@ -115,7 +115,7 @@ To install cjk fonts on startup as an example pass the environment variables (Al
 
 ```
 -e DOCKER_MODS=linuxserver/mods:universal-package-install 
--e INSTALL_PACKAGES=noto-fonts-cjk
+-e INSTALL_PACKAGES=fonts-noto-cjk
 -e LC_ALL=zh_CN.UTF-8
 ```
 
@@ -411,7 +411,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **25.11.24:** - Rebase to Debian for x86_64 using official appimage.
+* **25.11.24:** - Rebase to Debian using official appimage, drop aarch64 support.
 * **10.02.24:** - Update Readme with new env vars and ingest proper PWA icon.
 * **05.09.23:** - Add openexr dependency.
 * **18.03.23:** - Rebase to KasmVNC base image.

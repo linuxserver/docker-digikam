@@ -39,6 +39,12 @@ RUN \
   mv \
     /usr/bin/chromium \
     /usr/bin/chromium-real && \
+  echo '#!/bin/bash' > /usr/sbin/digikam && \
+  echo 'cd /opt/digikam && ./AppRun' >> /usr/sbin/digikam && \
+  chmod +x /usr/sbin/digikam && \
+  ln -s \
+    /usr/bin/chromium \
+    /usr/bin/firefox && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
