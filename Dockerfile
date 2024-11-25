@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:arch
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
 # set version label
 ARG BUILD_DATE
@@ -16,23 +16,36 @@ RUN \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/digikam-logo.png && \
   echo "**** install runtime packages ****" && \
-  pacman -Sy --noconfirm --needed \
-    breeze-icons \
-    digikam \
-    firefox \
-    mariadb \
+  apt-get update && \
+  apt-get install -y --no-install-recommends \
+    breeze-icon-theme \
+    chromium \
+    mariadb-server \
     openexr \
-    perl-image-exiftool && \
-  echo "**** image tweaks ****" && \
-  ln -s \
-    /usr/bin/vendor_perl/exiftool \
-    /usr/bin/exiftool && \
-  dbus-uuidgen > /etc/machine-id && \
+    libimage-exiftool-perl && \
+  echo "**** install from appimage ****" && \
+  if [ -z ${DIGIKAM_VERSION+x} ]; then \
+    DIGIKAM_VERSION=$(curl -sL https://mirrors.mit.edu/kde/stable/digikam/ \
+    | awk -F'(="|/")' '/href="[0-9]/ {print $2}'); \
+  fi && \
+  curl -o \
+    /tmp/digi.app -L \
+    "https://mirrors.mit.edu/kde/stable/digikam/${DIGIKAM_VERSION}/digiKam-${DIGIKAM_VERSION}-Qt6-x86-64.appimage" && \
+  cd /tmp && \
+  chmod +x digi.app && \
+  ./digi.app --appimage-extract && \
+  mv squashfs-root /opt/digikam && \
+  echo "**** OS Tweaks ****" && \
+  mv \
+    /usr/bin/chromium \
+    /usr/bin/chromium-real && \
   echo "**** cleanup ****" && \
+  apt-get autoclean && \
   rm -rf \
-    /tmp/* \
-    /var/cache/pacman/pkg/* \
-    /var/lib/pacman/sync/*
+    /config/.cache \
+    /var/lib/apt/lists/* \
+    /var/tmp/* \
+    /tmp/*
 
 # add local files
 COPY /root /

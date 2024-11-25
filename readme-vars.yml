@@ -57,6 +57,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "25.11.24:", desc: "Rebase to Debian for x86_64 using official appimage." }
   - { date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon." }
   - { date: "05.09.23:", desc: "Add openexr dependency." }
   - { date: "18.03.23:", desc: "Rebase to KasmVNC base image." }
