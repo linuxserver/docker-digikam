@@ -7,66 +7,119 @@ project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/ma
 project_blurb: "[digiKam]({{ project_url }}): Professional Photo Management with the Power of Open Source"
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "latest"}
 # development version
 development_versions: false
-
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_usage_include_ports: false
 param_env_vars:
-  - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York." }
+  - {env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York."}
 # optional variables
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "SUBFOLDER", env_value: "/", desc: "Specify a subfolder to use with reverse proxies, IE `/subfolder/`"}
+  - {env_var: "SUBFOLDER", env_value: "/", desc: "Specify a subfolder to use with reverse proxies, IE `/subfolder/`"}
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Users home directory in the container, stores database." }
+  - {vol_path: "/config", vol_host_path: "/path/to/config", desc: "Users home directory in the container, stores database."}
 # optional parameters
 opt_param_usage_include_ports: true
 opt_param_ports:
-  - { external_port: "3000", internal_port: "3000", port_desc: "digiKam desktop gui" }
-  - { external_port: "3001", internal_port: "3001", port_desc: "digiKam desktop gui HTTPS" }
-
+  - {external_port: "3000", internal_port: "3000", port_desc: "digiKam desktop gui"}
+  - {external_port: "3001", internal_port: "3001", port_desc: "digiKam desktop gui HTTPS"}
 # Kasm blurb settings
 kasm_blurb: true
 show_nvidia: true
 external_http_port: "3000"
 external_https_port: "3001"
 noto_fonts: "fonts-noto-cjk"
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
   #### Mysql Internal
-  
+
   When using mysql internal mode for the database you will need to click on "Find" Button for all the required binaries (mysql_install_db,mysqladmin,mysqld). Then select the binary file and press Open.
 
   The application can be accessed at:
 
   * http://yourhost:3000/
   * https://yourhost:3001/
-
+# init diagram
+init_diagram: |
+  "digikam:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-kasmvnc-end -> init-config
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-crontab-config -> init-config-end
+    init-openboxcopy -> init-config-end
+    init-config -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    init-os-end -> init-kasmvnc
+    init-nginx -> init-kasmvnc-config
+    init-video -> init-kasmvnc-end
+    base -> init-migrations
+    init-config-end -> init-mods
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-kasmvnc -> init-nginx
+    init-config -> init-openboxcopy
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-custom-files -> init-services
+    init-kasmvnc-config -> init-video
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-de
+    svc-nginx -> svc-de
+    svc-de -> legacy-services
+    init-services -> svc-docker
+    svc-de -> svc-docker
+    svc-docker -> legacy-services
+    init-services -> svc-kasmvnc
+    svc-pulseaudio -> svc-kasmvnc
+    svc-kasmvnc -> legacy-services
+    init-services -> svc-kclient
+    svc-kasmvnc -> svc-kclient
+    svc-kclient -> legacy-services
+    init-services -> svc-nginx
+    svc-kclient -> svc-nginx
+    svc-nginx -> legacy-services
+    init-services -> svc-pulseaudio
+    svc-pulseaudio -> legacy-services
+  }
+  Base Images: {
+    "baseimage-kasmvnc:debianbookworm" <- "baseimage-debian:bookworm"
+  }
+  "digikam:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "25.11.24:", desc: "Rebase to Debian using official appimage, drop aarch64 support." }
-  - { date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon." }
-  - { date: "05.09.23:", desc: "Add openexr dependency." }
-  - { date: "18.03.23:", desc: "Rebase to KasmVNC base image." }
-  - { date: "20.01.23:", desc: "Added breeze-icons package for icon support." }
-  - { date: "21.11.22:", desc: "Trigger upon baseimage updates (arch being a rolling distro has too many dependency breaks otherwise). Release version will be the baseimage build date going forward." }
-  - { date: "20.10.22:", desc: "Migrate to s6v3." }
-  - { date: "07.03.22:", desc: "Add Exiftool and firefox for image exports." }
-  - { date: "20.02.22:", desc: "Add MariaDB, expand documentation." }
-  - { date: "15.02.22:", desc: "Rebase to Arch." }
-  - { date: "27.12.21:", desc: "Rebase to focal to resolve dependency issues." }
-  - { date: "27.03.21:", desc: "Download link fixed." }
-  - { date: "20.05.20:", desc: "Initial release." }
-
+  - {date: "25.11.24:", desc: "Rebase to Debian using official appimage, drop aarch64 support."}
+  - {date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon."}
+  - {date: "05.09.23:", desc: "Add openexr dependency."}
+  - {date: "18.03.23:", desc: "Rebase to KasmVNC base image."}
+  - {date: "20.01.23:", desc: "Added breeze-icons package for icon support."}
+  - {date: "21.11.22:", desc: "Trigger upon baseimage updates (arch being a rolling distro has too many dependency breaks otherwise). Release version will be the baseimage build date going forward."}
+  - {date: "20.10.22:", desc: "Migrate to s6v3."}
+  - {date: "07.03.22:", desc: "Add Exiftool and firefox for image exports."}
+  - {date: "20.02.22:", desc: "Add MariaDB, expand documentation."}
+  - {date: "15.02.22:", desc: "Rebase to Arch."}
+  - {date: "27.12.21:", desc: "Rebase to focal to resolve dependency issues."}
+  - {date: "27.03.21:", desc: "Download link fixed."}
+  - {date: "20.05.20:", desc: "Initial release."}
