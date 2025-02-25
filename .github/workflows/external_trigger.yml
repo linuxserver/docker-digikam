@@ -26,7 +26,7 @@ jobs:
           echo "> [!NOTE]" >> $GITHUB_STEP_SUMMARY
           echo "> External trigger running off of master branch. To disable this trigger, add \`digikam_master\` into the Github organizational variable \`SKIP_EXTERNAL_TRIGGER\`." >> $GITHUB_STEP_SUMMARY
           printf "\n## Retrieving external version\n\n" >> $GITHUB_STEP_SUMMARY
-          EXT_RELEASE=$(curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(="|/")' '/href="[0-9]/ {print $2}')
+          EXT_RELEASE=$(curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(="./|/")' '/href="./[0-9]/ {print $2}')
           echo "Type is \`custom_version_command\`" >> $GITHUB_STEP_SUMMARY
           if grep -q "^digikam_master_${EXT_RELEASE}" <<< "${SKIP_EXTERNAL_TRIGGER}"; then
             echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY

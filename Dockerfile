@@ -26,7 +26,7 @@ RUN \
   echo "**** install from appimage ****" && \
   if [ -z ${DIGIKAM_VERSION+x} ]; then \
     DIGIKAM_VERSION=$(curl -sL https://mirrors.mit.edu/kde/stable/digikam/ \
-    | awk -F'(="|/")' '/href="[0-9]/ {print $2}'); \
+    | awk -F'(="./|/")' '/href=".\/[0-9]/ {print $2}'); \
   fi && \
   curl -o \
     /tmp/digi.app -L \
