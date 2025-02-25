@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-digikam
 external_type: na
-custom_version_command: "curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(=\"./|/\")' '/href=\".\\/[0-9]/ {print $2}'"
+custom_version_command: "curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(=\"./|/\")' '/href=\".\\\\/[0-9]/ {print $2}'"
 release_type: stable
 release_tag: latest
 ls_branch: master
