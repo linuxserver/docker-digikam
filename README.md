@@ -413,6 +413,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **03.04.25:** - Update chromium launch options to improve performance.
 * **25.11.24:** - Rebase to Debian using official appimage, drop aarch64 support.
 * **10.02.24:** - Update Readme with new env vars and ingest proper PWA icon.
 * **05.09.23:** - Add openexr dependency.
