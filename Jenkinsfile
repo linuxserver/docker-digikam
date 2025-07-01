@@ -143,7 +143,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(="./|/")' '/href=".\\/[0-9]/ {print $2}' ''',
+            script: ''' curl -sL https://mirrors.mit.edu/kde/stable/digikam/ | awk -F'(="./|/")' '/href=".\\/[0-9]/ {print $2}' | sort -rn | head -n 1 ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
