@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
+FROM ghcr.io/linuxserver/baseimage-selkies:debianbookworm
 
 # set version label
 ARG BUILD_DATE
@@ -13,12 +13,13 @@ ENV TITLE=DigiKam
 RUN \
   echo "**** add icon ****" && \
   curl -o \
-    /kclient/public/icon.png \
+    /usr/share/selkies/www/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/digikam-logo.png && \
   echo "**** install runtime packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     breeze-icon-theme \
+    caja \
     chromium \
     mariadb-server \
     openexr \
