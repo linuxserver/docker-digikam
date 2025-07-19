@@ -30,14 +30,11 @@ param_volumes:
 # optional parameters
 opt_param_usage_include_ports: true
 opt_param_ports:
-  - {external_port: "3000", internal_port: "3000", port_desc: "digiKam desktop gui"}
+  - {external_port: "3000", internal_port: "3000", port_desc: "digiKam desktop gui HTTP, must be proxied"}
   - {external_port: "3001", internal_port: "3001", port_desc: "digiKam desktop gui HTTPS"}
-# Kasm blurb settings
-kasm_blurb: true
+# Selkies blurb settings
+selkies_blurb: true
 show_nvidia: true
-external_http_port: "3000"
-external_https_port: "3001"
-noto_fonts: "fonts-noto-cjk"
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -47,7 +44,6 @@ app_setup_block: |
 
   The application can be accessed at:
 
-  * http://yourhost:3000/
   * https://yourhost:3001/
 # init diagram
 init_diagram: |
@@ -113,6 +109,7 @@ init_diagram: |
   "digikam:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "12.07.25:", desc: "Rebase to Selkies, HTTPS IS NOW REQUIRED."}
   - {date: "03.04.25:", desc: "Update chromium launch options to improve performance."}
   - {date: "25.11.24:", desc: "Rebase to Debian using official appimage, drop aarch64 support."}
   - {date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon."}
