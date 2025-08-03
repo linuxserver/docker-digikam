@@ -862,7 +862,7 @@ libspeexdsp1                                                                  1.
 libsqlite3-0                                                                  3.40.1-2+deb12u1                           deb                         
 libss2                                                                        1.47.0-2                                   deb                         
 libssh2-1                                                                     1.10.0-3+b1                                deb                         
-libssl3                                                                       3.0.16-1~deb12u1                           deb                         
+libssl3                                                                       3.0.17-1~deb12u1                           deb                         
 libstartup-notification0                                                      0.12-6+b1                                  deb                         
 libstdc++-12-dev                                                              12.2.0-14+deb12u1                          deb                         
 libstdc++6                                                                    12.2.0-14+deb12u1                          deb                         
@@ -1016,8 +1016,8 @@ oauthlib                                                                      3.
 ocl-icd-libopencl1                                                            2.3.1-1                                    deb                         
 openbox                                                                       3.6.1-10                                   deb                         
 openexr                                                                       3.1.5-5                                    deb                         
-openssh-client                                                                1:9.2p1-2+deb12u6                          deb                         
-openssl                                                                       3.0.16-1~deb12u1                           deb                         
+openssh-client                                                                1:9.2p1-2+deb12u7                          deb                         
+openssl                                                                       3.0.17-1~deb12u1                           deb                         
 packagekit                                                                    1.2.6-5                                    deb                         
 parted                                                                        3.5-3                                      deb                         
 pasimple                                                                      0.0.3                                      python                      
