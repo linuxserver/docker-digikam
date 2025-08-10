@@ -30,8 +30,8 @@ caja                                                                          1.
 caja-common                                                                   1.26.1-1+deb12u1                           deb                         
 catatonit                                                                     0.1.7-1+b1                                 deb                         
 cffi                                                                          1.17.1                                     python                      
-chromium                                                                      138.0.7204.183-1~deb12u1                   deb                         
-chromium-common                                                               138.0.7204.183-1~deb12u1                   deb                         
+chromium                                                                      139.0.7258.66-1~deb12u1                    deb                         
+chromium-common                                                               139.0.7258.66-1~deb12u1                    deb                         
 cli                                                                           UNKNOWN                                    binary                      
 cli-32                                                                        UNKNOWN                                    binary                      
 cli-64                                                                        UNKNOWN                                    binary                      
@@ -50,7 +50,7 @@ cpp-12                                                                        12
 cron                                                                          3.0pl1-162                                 deb                         
 cron-daemon-common                                                            3.0pl1-162                                 deb                         
 cryptography                                                                  38.0.4                                     python     (+1 duplicate)   
-cryptography                                                                  45.0.5                                     python                      
+cryptography                                                                  45.0.6                                     python                      
 curl                                                                          7.88.1-10+deb12u12                         deb                         
 dario.cat/mergo                                                               v1.0.0                                     go-module                   
 dario.cat/mergo                                                               v1.0.1                                     go-module  (+1 duplicate)   
@@ -862,7 +862,7 @@ libspeexdsp1                                                                  1.
 libsqlite3-0                                                                  3.40.1-2+deb12u1                           deb                         
 libss2                                                                        1.47.0-2                                   deb                         
 libssh2-1                                                                     1.10.0-3+b1                                deb                         
-libssl3                                                                       3.0.17-1~deb12u1                           deb                         
+libssl3                                                                       3.0.17-1~deb12u2                           deb                         
 libstartup-notification0                                                      0.12-6+b1                                  deb                         
 libstdc++-12-dev                                                              12.2.0-14+deb12u1                          deb                         
 libstdc++6                                                                    12.2.0-14+deb12u1                          deb                         
@@ -1017,7 +1017,7 @@ ocl-icd-libopencl1                                                            2.
 openbox                                                                       3.6.1-10                                   deb                         
 openexr                                                                       3.1.5-5                                    deb                         
 openssh-client                                                                1:9.2p1-2+deb12u7                          deb                         
-openssl                                                                       3.0.17-1~deb12u1                           deb                         
+openssl                                                                       3.0.17-1~deb12u2                           deb                         
 packagekit                                                                    1.2.6-5                                    deb                         
 parted                                                                        3.5-3                                      deb                         
 pasimple                                                                      0.0.3                                      python                      
@@ -1031,7 +1031,7 @@ perl-modules-5.36                                                             5.
 pillow                                                                        11.3.0                                     python                      
 pinentry-curses                                                               1.2.1-1                                    deb                         
 pip                                                                           23.0.1                                     python                      
-pixelflux                                                                     1.3.0                                      python                      
+pixelflux                                                                     1.3.1                                      python                      
 polkitd                                                                       122-3                                      deb                         
 poppler-data                                                                  0.4.12-1                                   deb                         
 procps                                                                        2:4.0.2-3                                  deb                         
