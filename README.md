@@ -231,8 +231,8 @@ services:
     volumes:
       - /path/to/config:/config
     ports:
-      - 3000:3000 #optional
-      - 3001:3001 #optional
+      - 3000:3000
+      - 3001:3001
     shm_size: "1gb"
     restart: unless-stopped
 ```
@@ -245,8 +245,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
-  -p 3000:3000 `#optional` \
-  -p 3001:3001 `#optional` \
+  -p 3000:3000 \
+  -p 3001:3001 \
   -v /path/to/config:/config \
   --shm-size="1gb" \
   --restart unless-stopped \
@@ -259,8 +259,8 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 3000` | digiKam desktop gui HTTP, must be proxied |
-| `-p 3001` | digiKam desktop gui HTTPS |
+| `-p 3000:3000` | Calligra desktop gui HTTP, must be proxied. |
+| `-p 3001:3001` | Calligra desktop gui HTTPS. |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
