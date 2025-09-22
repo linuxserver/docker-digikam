@@ -19,11 +19,10 @@ param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
   - {vol_path: "/config", vol_host_path: "/path/to/config", desc: "Users home directory in the container, stores database."}
-# optional parameters
-opt_param_usage_include_ports: true
-opt_param_ports:
-  - {external_port: "3000", internal_port: "3000", port_desc: "digiKam desktop gui HTTP, must be proxied"}
-  - {external_port: "3001", internal_port: "3001", port_desc: "digiKam desktop gui HTTPS"}
+param_usage_include_ports: true
+param_ports:
+  - {external_port: "3000", internal_port: "3000", port_desc: "Calligra desktop gui HTTP, must be proxied."}
+  - {external_port: "3001", internal_port: "3001", port_desc: "Calligra desktop gui HTTPS."}
 custom_params:
   - {name: "shm-size", name_compose: "shm_size", value: "1gb", desc: "Recommended for all desktop images."}
 # Selkies blurb settings
