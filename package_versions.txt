@@ -32,8 +32,8 @@ caja                                                                          1.
 caja-common                                                                   1.26.4-1                               deb                         
 catatonit                                                                     0.2.1-2+b7                             deb                         
 cffi                                                                          2.0.0                                  python                      
-chromium                                                                      145.0.7632.159-1~deb13u1               deb                         
-chromium-common                                                               145.0.7632.159-1~deb13u1               deb                         
+chromium                                                                      146.0.7680.80-1~deb13u1                deb                         
+chromium-common                                                               146.0.7680.80-1~deb13u1                deb                         
 cli                                                                           UNKNOWN                                binary                      
 cli-32                                                                        UNKNOWN                                binary                      
 cli-64                                                                        UNKNOWN                                binary                      
@@ -647,6 +647,7 @@ krb5-locales                                                                  1.
 labwc                                                                         0.8.3-1                                deb                         
 libabsl20240722                                                               20240722.0-4                           deb                         
 libacl1                                                                       2.3.2-2+b1                             deb                         
+libaio1t64                                                                    0.3.113-8+b1                           deb                         
 libaom3                                                                       3.12.1-1                               deb                         
 libapparmor1                                                                  4.1.0-1                                deb                         
 libapt-pkg7.0                                                                 3.0.3                                  deb                         
@@ -704,7 +705,7 @@ libcc1-0                                                                      14
 libcloudproviders0                                                            0.3.6-2                                deb                         
 libcodec2-1.2                                                                 1.2.0-3                                deb                         
 libcolord2                                                                    1.4.7-3                                deb                         
-libcom-err2                                                                   1.47.2-3+b7                            deb                         
+libcom-err2                                                                   1.47.2-3+b10                           deb                         
 libconfig-inifiles-perl                                                       3.000003-3                             deb                         
 libcrypt-dev                                                                  1:4.4.38-1                             deb                         
 libcrypt1                                                                     1:4.4.38-1                             deb                         
@@ -745,7 +746,7 @@ libevent-2.1-7t64                                                             2.
 libexempi8                                                                    2.6.6-2                                deb                         
 libexif12                                                                     0.6.25-1                               deb                         
 libexpat1                                                                     2.7.1-2                                deb                         
-libext2fs2t64                                                                 1.47.2-3+b7                            deb                         
+libext2fs2t64                                                                 1.47.2-3+b10                           deb                         
 libfcft4t64                                                                   3.3.1-1                                deb                         
 libfdisk1                                                                     2.41-5                                 deb                         
 libffi8                                                                       3.4.8-2                                deb                         
@@ -856,7 +857,7 @@ liblz4-1                                                                      1.
 liblzma5                                                                      5.8.1-1                                deb                         
 libmagic-mgc                                                                  1:5.46-5                               deb                         
 libmagic1t64                                                                  1:5.46-5                               deb                         
-libmariadb3                                                                   1:11.8.3-0+deb13u1                     deb                         
+libmariadb3                                                                   1:11.8.6-0+deb13u1                     deb                         
 libmate-desktop-2-17t64                                                       1.26.2-1.2                             deb                         
 libmd0                                                                        1.1.0-2+b1                             deb                         
 libminizip1t64                                                                1:1.3.dfsg+really1.3.1-1+b1            deb                         
@@ -1097,11 +1098,11 @@ login.defs                                                                    1:
 lsof                                                                          4.99.4+dfsg-2                          deb                         
 make                                                                          4.4.1-2                                deb                         
 man-db                                                                        2.13.1-1                               deb                         
-mariadb-client                                                                1:11.8.3-0+deb13u1                     deb                         
-mariadb-client-core                                                           1:11.8.3-0+deb13u1                     deb                         
-mariadb-common                                                                1:11.8.3-0+deb13u1                     deb                         
-mariadb-server                                                                1:11.8.3-0+deb13u1                     deb                         
-mariadb-server-core                                                           1:11.8.3-0+deb13u1                     deb                         
+mariadb-client                                                                1:11.8.6-0+deb13u1                     deb                         
+mariadb-client-core                                                           1:11.8.6-0+deb13u1                     deb                         
+mariadb-common                                                                1:11.8.6-0+deb13u1                     deb                         
+mariadb-server                                                                1:11.8.6-0+deb13u1                     deb                         
+mariadb-server-core                                                           1:11.8.6-0+deb13u1                     deb                         
 mate-desktop                                                                  1.26.2-1.2                             deb                         
 mate-desktop-common                                                           1.26.2-1.2                             deb                         
 mawk                                                                          1.3.4.20250131-1                       deb                         
