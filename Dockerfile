@@ -11,7 +11,8 @@ LABEL maintainer="hackerman"
 
 # title
 ENV TITLE=DigiKam \
-    NO_GAMEPAD=true
+    NO_GAMEPAD=true \
+    PIXELFLUX_WAYLAND=true
 
 RUN \
   echo "**** add icon ****" && \
@@ -30,7 +31,7 @@ RUN \
   echo "**** install from appimage ****" && \
   if [ -z ${DIGIKAM_VERSION+x} ]; then \
     DIGIKAM_VERSION=$(curl -sL https://mirrors.mit.edu/kde/stable/digikam/ \
-    | awk -F'(="./|/")' '/href=".\/[0-9]/ {print $2}'); \
+    | awk -F'(="./|/")' '/href=".\/[0-9]/ {print $2}' | tail -n1); \
   fi && \
   curl -o \
     /tmp/digi.app -L \
